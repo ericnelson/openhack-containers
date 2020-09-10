@@ -7,12 +7,12 @@ steps:
     - build: -t $Registry/tripinsights/userprofile:$ID -f ./src/userprofile/Dockerfile ./src/userprofile
     - push:
         - $Registry/tripinsights/poi:$ID
-        - $Registry/tripinsights/poi:$latest
+        - $Registry/tripinsights/poi:latest
         - $Registry/tripinsights/trips:$ID
-        - $Registry/tripinsights/trips:$latest
+        - $Registry/tripinsights/trips:latest
         - $Registry/tripinsights/tripviewer:$ID
-        - $Registry/tripinsights/tripviewer:$latest
+        - $Registry/tripinsights/tripviewer:latest
         - $Registry/tripinsights/user-java:$ID
-        - $Registry/tripinsights/user-java:$latest
+        - $Registry/tripinsights/user-java:latest
         - $Registry/tripinsights/userprofile:$ID
-        - $Registry/tripinsights/userprofile:$latest
+        - $Registry/tripinsights/userprofile:latest
