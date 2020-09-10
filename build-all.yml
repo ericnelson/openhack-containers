@@ -1,0 +1,18 @@
+version: v.1.1.0
+steps:
+    - build: -t $Registry/tripinsights/poi:$ID -f Dockerfile ./src/poi
+    - build: -t $Registry/tripinsights/trips:$ID -f Dockerfile ./src/trips
+    - build: -t $Registry/tripinsights/tripviewer:$ID Dockerfile ./src/tripviewer
+    - build: -t $Registry/tripinsights/user-java:$ID Dockerfile ./src/user-java
+    - build: -t $Registry/tripinsights/userprofile:$ID Dockerfile ./src/userprofile
+    - push:
+        - $Registry/tripinsights/poi:$ID
+        - $Registry/tripinsights/poi:$latest
+        - $Registry/tripinsights/trips:$ID
+        - $Registry/tripinsights/trips:$latest
+        - $Registry/tripinsights/tripviewer:$ID
+        - $Registry/tripinsights/tripviewer:$latest
+        - $Registry/tripinsights/user-java:$ID
+        - $Registry/tripinsights/user-java:$latest
+        - $Registry/tripinsights/userprofile:$ID
+        - $Registry/tripinsights/userprofile:$latest
