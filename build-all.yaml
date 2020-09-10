@@ -1,7 +1,8 @@
 version: v1.1.0
 steps:
     - build: -t $Registry/tripinsights/poi:$ID -f ./src/poi/Dockerfile ./src/poi 
+    - cmd: docker tag $Registry/tripinsights/poi:$ID $Registry/tripinsights/poi:latest
     - push:
         - $Registry/tripinsights/poi:$ID
-        - $Registry/tripinsights/poi
+        - $Registry/tripinsights/poi:latest
         
