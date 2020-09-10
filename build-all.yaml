@@ -1,4 +1,4 @@
-version: v.1.0.0
+version: v1.0.0
 steps:
     - build: -t $Registry/tripinsights/poi:$ID -f Dockerfile ./src/poi
     - build: -t $Registry/tripinsights/trips:$ID -f Dockerfile ./src/trips
